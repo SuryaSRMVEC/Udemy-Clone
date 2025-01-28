@@ -57,6 +57,10 @@ body{
 
 }
 
+.navbar__s4{
+    display: none;
+}
+
 .mylearning{
     position: relative;
     cursor: pointer;
@@ -144,7 +148,7 @@ body{
 
 .recommended__container{
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     margin-top: 10px;
     flex-wrap: wrap;
 
@@ -152,12 +156,14 @@ body{
 }
 
 .course-card{
-    width: 275px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img{
     width: 100%;
-    height: 50%;
+    height: 50%
 }
 
 .topics{
@@ -190,7 +196,7 @@ body{
 .popular__container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-around;
     margin-top: 10px;
 }
 
@@ -219,4 +225,26 @@ body{
     justify-content: space-between;
     margin: 20px;
     align-items: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 800px){
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+
+    .navbar__s3{
+        display: none;
+    }
+
+    .navbar__s4{
+        display: block;
+    }
 }
